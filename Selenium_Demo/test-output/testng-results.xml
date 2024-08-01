@@ -2,16 +2,16 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-07-30T10:03:42 IST" name="Default suite" finished-at="2024-07-30T10:03:42 IST" duration-ms="56">
+  <suite started-at="2024-08-01T07:37:02 IST" name="Default suite" finished-at="2024-08-01T07:37:14 IST" duration-ms="11062">
     <groups>
     </groups>
-    <test started-at="2024-07-30T10:03:42 IST" name="Default test" finished-at="2024-07-30T10:03:42 IST" duration-ms="56">
-      <class name="FileOperations.HandlingTextFiles">
-        <test-method signature="CreateTextFile()[pri:0, instance:FileOperations.HandlingTextFiles@478db956]" started-at="2024-07-30T10:03:42 IST" name="CreateTextFile" finished-at="2024-07-30T10:03:42 IST" duration-ms="9" status="PASS">
+    <test started-at="2024-08-01T07:37:02 IST" name="Default test" finished-at="2024-08-01T07:37:14 IST" duration-ms="11062">
+      <class name="SeleniumLearning.LoginTests">
+        <test-method signature="GoogleSearch()[pri:0, instance:SeleniumLearning.LoginTests@13d9cbf5]" started-at="2024-08-01T07:37:03 IST" name="GoogleSearch" finished-at="2024-08-01T07:37:14 IST" duration-ms="10838" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- CreateTextFile -->
-      </class> <!-- FileOperations.HandlingTextFiles -->
+        </test-method> <!-- GoogleSearch -->
+      </class> <!-- SeleniumLearning.LoginTests -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

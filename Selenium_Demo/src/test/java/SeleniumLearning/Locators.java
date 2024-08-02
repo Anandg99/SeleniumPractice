@@ -6,7 +6,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.springframework.util.Assert;
 import org.testng.annotations.*;
-public class LoginTests 
+public class Locators 
 {
 
 	@Test

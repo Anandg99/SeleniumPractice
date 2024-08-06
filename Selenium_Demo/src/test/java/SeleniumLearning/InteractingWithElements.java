@@ -7,6 +7,13 @@ import org.springframework.util.Assert;
 import org.testng.annotations.*;
 import org.openqa.selenium.support.ui.*;
 public class InteractingWithElements {
+	public WebDriver dr;
+	public InteractingWithElements()
+	{
+		System.setProperty("webdriver.chrome.driver", "C:\\Users\\Anand.Gummadilli\\Downloads\\chromedriver.exe");
+		dr = new ChromeDriver();
+		
+	}
 @Test
 public void InteractWithCheckBoxAndRadio()
 {
@@ -51,7 +58,7 @@ public void InteractingWithSelectBox()
 	  objSelect.selectByVisibleText("INDIA");
 	  objSelect.selectByValue("CHINA");
 	  
-	  //Console.WriteLine("Multiple values allowed:" + objSelect.IsMultiple);
+	  System.out.println("Multiple values allowed:" + objSelect.isMultiple());
 
 	  int optCount = objSelect.getOptions().size();
 	  System.out.println("options count is:" + optCount);
@@ -62,4 +69,22 @@ public void InteractingWithSelectBox()
 	      objSelect.selectByIndex(i);
 	  }
 }
+
+@Test
+public void LearnListbox()
+{
+	 dr.navigate().to("https://output.jsbin.com/osebed/2");
+	 WebElement fruitsLB = dr.findElement(By.xpath("//select[@id='fruits']"));
+	 Select objSelect = new Select(fruitsLB);
+	 System.out.println("Multi select allowed:" + objSelect.isMultiple());
+	 objSelect.selectByValue("apple");
+	 objSelect.selectByVisibleText("Grape");
+	 objSelect.selectByIndex(2);
+	 System.out.println("Selected options count before:" + objSelect.getAllSelectedOptions().size()); //3
+	 objSelect.deselectByValue("apple");
+	 //objSelect.DeselectAll();
+	 System.out.println("Selected options count after deselecting apple:" + objSelect.getAllSelectedOptions().size()); //2
+	
+}
+
 }

@@ -3,11 +3,11 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="SeleniumLearning.InteractingWithElements">
+      <class name="SeleniumLearning.HandlingAlerts">
         <methods>
-          <include name="InteractingWithSelectBox"/>
+          <include name="AcceptAlert"/>
         </methods>
-      </class> <!-- SeleniumLearning.InteractingWithElements -->
+      </class> <!-- SeleniumLearning.HandlingAlerts -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

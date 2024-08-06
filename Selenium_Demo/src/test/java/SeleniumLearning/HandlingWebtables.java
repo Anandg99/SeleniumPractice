@@ -28,10 +28,10 @@ public class HandlingWebtables {
 
 	@Test
 
-	public void VerifyRows() throws InterruptedException
+	public void VerifyTop1Company() throws InterruptedException
     {
         dr.navigate().to("https://www.moneycontrol.com/stocks/marketinfo/marketcap/bse/index.html");
-        Thread.sleep(10000);
+        Thread.sleep(15000);
         List<WebElement> listCompanies=  dr.findElements(By.xpath("//table[@class='Topfilter_web_tbl_indices__Wa1Sj undefined']/tbody/tr"));
         System.out.println(listCompanies.size());
         WebElement topComp = dr.findElement(By.xpath("//table[@class='Topfilter_web_tbl_indices__Wa1Sj undefined']/tbody/tr[1]/td[1]"));
@@ -73,8 +73,8 @@ public class HandlingWebtables {
 	@Test
 
 	public void GetRankByCompanyName() throws InterruptedException {
-		int rank = GetRankByCompany("SBI");
-		System.out.println("SBI Rank is:" + rank);
+		int rank = GetRankByCompany("Infosys");
+		System.out.println("Infosys Rank is:" + rank);
 
 	}
 
@@ -84,7 +84,7 @@ public class HandlingWebtables {
 		int index = 0;
 		dr.navigate().to("https://www.moneycontrol.com/stocks/marketinfo/marketcap/bse/index.html");
 		dr.manage().window().maximize();
-		Thread.sleep(30000);
+		Thread.sleep(15000);
 		List<WebElement> rowList = dr.findElements(By.xpath("//table/tbody/tr"));
 
 		for (int i = 1; i <= rowList.size(); i++) {

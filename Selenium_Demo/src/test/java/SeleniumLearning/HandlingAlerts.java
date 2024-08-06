@@ -31,12 +31,20 @@ public class HandlingAlerts {
 		// Switching to Alert
 		Alert alert = dr.switchTo().alert(); // switch to 1st popup
 		System.out.print("1st alert text:" + alert.getText());
-		alert.accept(); // click on OK button
+		//alert.accept(); // click on OK button
+		if(alert.getText().toString().contains("Do you really want to delete this Customer?"))
+		{
+		   alert.accept(); // click on OK button
+		  //  alert.dismiss();
+		}
 
+		
 		Alert alert2 = dr.switchTo().alert(); // switch to 2nd popup
-		System.out.print("1st alert text:" + alert2.getText());
-		alert2.accept(); // click on OK button
-
+		System.out.print("2nd alert text:" + alert2.getText());
+		if(alert2.getText().contains("Customer Successfully Delete!"))
+		{
+		  alert2.accept(); // click on OK button
+		}
 	}
 
 	@Test
@@ -57,6 +65,7 @@ public class HandlingAlerts {
 		Alert alertDelete = dr.switchTo().alert();
 		String actualMsg = alertDelete.getText();
 		Assert.assertEquals("Customer Successfully Delete!", actualMsg, "Customer is not deleted");
-		alertDelete.accept(); // Click on OK button
+		//alertDelete.accept(); // Click on OK button
+	     alertDelete.dismiss();
 	}
 }

@@ -1,4 +1,4 @@
-package CoreJava;
+package SeleniumLearning;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -26,7 +26,7 @@ public class ActionsClass {
 	// Actions class: MovetoElement
 	@Test
 	public void MoveToElement() {
-		Actions action = new Actions(dr);
+		Actions action = new Actions(dr); //parameterized constructor
 		dr.navigate().to("https://www.google.com");
 		WebElement txtSrch = dr.findElement(By.name("q"));
 		dr.manage().window().maximize();
@@ -58,6 +58,69 @@ public class ActionsClass {
 		System.out.println("Title is:" + dr.getTitle());
 		action.moveToElement(txtSrch).contextClick().build().perform();
 	}
+	@Test
+			public void VerifyPrivacyNote()
+			{
+			    dr.navigate().to("http://amazon.in");
+			    WebElement linkPrivacy = dr.findElement(By.xpath("//a[text()='Privacy Notice']"));
+			    Actions action = new Actions(dr);
+			    action.moveToElement(linkPrivacy).build().perform();
+			    linkPrivacy.click();
+			}
+	
+	@Test
+			public void DragAndDropElement()
+			{
+			    dr.navigate().to("http://demo.guru99.com/test/drag_drop.html");
+
+			    //Element which needs to drag.    		
+			    WebElement From = dr.findElement(By.xpath("//*[@id='credit2']/a"));
+
+			    //Element on which need to drop.		
+			    WebElement To = dr.findElement(By.xpath("//*[@id='bank']/li"));
+
+			    //Using Action class for drag and drop.		
+			    Actions action = new Actions(dr);
+
+			    //Dragged and dropped.		
+			    action.dragAndDrop(From, To).build().perform();
+			    //Thread.sleep(2000);
+
+			 //   WebElement debtMovement = dr.findElement(By.xpath("//td[normalize-space(text())='Debit Movement']"));
+			  //  Assert.IsTrue(debtMovement.isDisplayed()==true, "Debit movement is not displayed");
+			}
+	
+	@Test
+	public void DragAndDropElementSales()
+	{
+	    dr.navigate().to("http://demo.guru99.com/test/drag_drop.html");
+	    dr.manage().window().maximize();
+
+	    //Element which needs to drag.    		
+	    WebElement From = dr.findElement(By.xpath("//a[normalize-space(text())='SALES']"));
+
+	    //Element on which need to drop.		
+	    WebElement To = dr.findElement(By.xpath("(//li[@class='placeholder'])[3]"));
+
+	    //Using Action class for drag and drop.		
+	    Actions action = new Actions(dr);
+
+	    //Dragged and dropped.		
+	    action.dragAndDrop(From, To).build().perform();
+	    //Thread.sleep(2000);
+	}
+	@Test
+			public void KeyDownonElement() throws InterruptedException
+			{
+			    dr.navigate().to("https://www.Techtutorialz.com/");
+			    dr.manage().window().maximize();
+			    Thread.sleep(3000);
+			    Actions action = new Actions(dr);
+			    WebElement element = dr.findElement(By.xpath("//a[text()='View Tutorial Library']"));
+			    //element.click();
+			    action.sendKeys(element, Keys.ENTER).build().perform();
+			 	
+			}
 
 	@Test
 	public void LearnJavascriptExecutor() throws InterruptedException {

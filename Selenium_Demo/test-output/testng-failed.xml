@@ -3,11 +3,11 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="SeleniumLearning.ActionsClass">
+      <class name="SeleniumLearning.clsGetScreenshot">
         <methods>
-          <include name="KeyDownonElement"/>
+          <include name="testBStackTakeScreenShot"/>
         </methods>
-      </class> <!-- SeleniumLearning.ActionsClass -->
+      </class> <!-- SeleniumLearning.clsGetScreenshot -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

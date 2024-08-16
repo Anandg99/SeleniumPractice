@@ -27,9 +27,15 @@ public void CLickonElement(WebElement element)
 {
 	element.click();
 }
+
 public void CLickonElementById(String strId,WebDriver dr)
 {
 	dr.findElement(By.id(strId)).click();
+}
+
+public void EnterText(WebDriver dr,String strName,String strText)
+{
+	dr.findElement(By.name(strName)).sendKeys(strText);
 }
 public void CLickonElementByXpath(String strXpath,WebDriver dr)
 {
@@ -46,6 +52,11 @@ public static void takeSnapShot(WebDriver webdriver, String fileWithPath) throws
 	FileUtils.copyFile(SrcFile, DestFile);
 
 }
+public void NavigatetoSite(WebDriver dr,String siteName)
+{
+	dr.navigate().to(siteName);
+}
+
 
 
 }

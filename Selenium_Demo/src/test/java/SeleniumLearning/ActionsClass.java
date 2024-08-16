@@ -143,4 +143,10 @@ public class ActionsClass {
 		Thread.sleep(2000);
 		objCommon.ScrollDown(1000, dr);
 	}
+	@Test
+	public void TestCase3()
+	{
+		System.out.println("Testcase3");
+	}
+	}
 }

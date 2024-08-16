@@ -14,6 +14,7 @@ public class GoogleHomePage {
 	public WebDriver dr;
 	public WebElement linkGmail;
 	public WebElement txtSrch;
+	public WebElement linkImages;
 
 	public GoogleHomePage(WebDriver driver) {
 		this.dr = driver;
@@ -21,6 +22,7 @@ public class GoogleHomePage {
 		PageFactory.initElements(driver, this);
 		txtSrch = dr.findElement(By.name("q"));
 		linkGmail = dr.findElement(By.linkText("Gmail"));
+		linkImages=dr.findElement(By.linkText("Images"));
 	}
 
 	@FindBy(how = How.NAME, using = "q")
@@ -28,6 +30,10 @@ public class GoogleHomePage {
 
 	@FindBy(how = How.XPATH, using = "//a[text()='New Delhi']")
 	public WebElement linkCapital;
+	
+	@FindBy(how=How.NAME,using="btnK")
+	public WebElement btnGoogleSearch;
+	
 
 	public void SearchKeyword() {
 		dr.findElement(By.name("q")).sendKeys("India");

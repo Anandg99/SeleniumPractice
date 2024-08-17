@@ -29,6 +29,8 @@ public class ActionsClass {
 	@Test
 	public void MoveToElement() 
 	{
+		try
+		{
 		Actions action = new Actions(dr); // parameterized constructor
 		dr.navigate().to("https://www.google.com");
 		WebElement txtSrch = dr.findElement(By.name("q"));
@@ -36,6 +38,11 @@ public class ActionsClass {
 		System.out.println("Current URL is:" + dr.getCurrentUrl());
 		System.out.println("Title is:" + dr.getTitle());
 		action.moveToElement(txtSrch).sendKeys("India").build().perform();
+		}
+		catch(Exception ex)
+		{
+			System.out.println(ex.getMessage());
+		}
 	}
 	@Test
 	public void LearnMouseOver() 
@@ -149,4 +156,4 @@ public class ActionsClass {
 		System.out.println("Testcase3");
 	}
 	}
-}
+

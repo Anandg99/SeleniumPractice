@@ -3,11 +3,11 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="TestCases.GoogleHomepageTests">
+      <class name="SeleniumLearning.ActionsClass">
         <methods>
-          <include name="SearvcChaina"/>
+          <include name="KeyDownonElement"/>
         </methods>
-      </class> <!-- TestCases.GoogleHomepageTests -->
+      </class> <!-- SeleniumLearning.ActionsClass -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

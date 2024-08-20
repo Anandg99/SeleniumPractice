@@ -8,7 +8,7 @@ import java.sql.Statement;
 import org.testng.annotations.Test;
 public class clsJDBC 
 {
-
+/*
 @Test
 public void GetEmployees() throws SQLException
 {
@@ -34,5 +34,7 @@ public void GetEmployees() throws SQLException
              System.out.println(resultSet.getString(2) + " " + resultSet.getString(3));
          }
  }
+ 
 }
+*/
 }

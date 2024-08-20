@@ -78,8 +78,7 @@ public class clsExceptionHandling {
 	            // this statement will throw
 	            // ArrayIndexOutOfBoundsException e
 	        }
-	        catch (ArrayIndexOutOfBoundsException
-	               | ArithmeticException e) 
+	        catch (ArrayIndexOutOfBoundsException e) 
 		 	{
 	            System.out.println(e.getMessage());
 	            // print the message

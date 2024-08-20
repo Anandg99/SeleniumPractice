@@ -1,3 +1,4 @@
+/*
 package SeleniumLearning;
 
 import org.openqa.selenium.By;
@@ -31,3 +32,4 @@ public class clsGetAttribute {
 		System.out.print("Value of text box is:" + txtSrch.getAttribute("value"));
 	}
 }
+*/

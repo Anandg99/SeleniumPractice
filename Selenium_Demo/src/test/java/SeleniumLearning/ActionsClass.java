@@ -148,5 +148,4 @@ public class ActionsClass {
 	{
 		System.out.println("Testcase3");
 	}
-	}
 }

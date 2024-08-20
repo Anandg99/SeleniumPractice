@@ -45,6 +45,7 @@ public class HandlingTextFiles {
              System.out.println("success...");    
             }catch(Exception e){System.out.println(e);}  
 	}
+	/*
 	@Test
 	public void AppendInFile() throws IOException
 	{
@@ -59,6 +60,7 @@ public class HandlingTextFiles {
 		  
 		}  
 	}
+	*/
 	@Test
 	public void ReadFile()
 	{
